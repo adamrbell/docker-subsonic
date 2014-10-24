@@ -5,6 +5,8 @@
 This is a Dockerfile for "SubSonic" - (http://www.subsonic.org/).
 Specifically for use within an unRAID environment.
 
+Forked and removed https
+
 ## Build from docker file:
 
 ```
