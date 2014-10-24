@@ -10,7 +10,7 @@ Forked and removed https
 ## Build from docker file:
 
 ```
-git clone https://github.com/HurricaneHernandez/docker-subsonic.git 
+git clone https://github.com/adamrbell/docker-subsonic.git 
 cd docker-subsonic
 docker build -t subsonic . 
 ```
