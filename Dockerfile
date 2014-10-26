@@ -5,6 +5,12 @@ MAINTAINER Carlos Hernandez <carlos@techbyte.ca>
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
 
+# Set correct environment variables
+ENV HOME /root
+
+# Use baseimage-docker's init system
+CMD ["/sbin/my_init"]
+
 # Set locale to UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV LANG en_US.UTF-8
