@@ -1,6 +1,7 @@
 # Builds docker image for subsonic
-FROM ubuntu:trusty
+FROM phusion/baseimage:0.9.11
 MAINTAINER Carlos Hernandez <carlos@techbyte.ca>
+ADD sources.list /etc/apt/
 
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
