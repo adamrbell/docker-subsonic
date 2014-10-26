@@ -4,7 +4,6 @@ MAINTAINER Carlos Hernandez <carlos@techbyte.ca>
 
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
-ADD sources.list /etc/apt/
 
 # Set locale to UTF-8
 ENV LANGUAGE en_US.UTF-8
