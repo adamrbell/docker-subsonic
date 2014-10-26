@@ -1,10 +1,10 @@
 # Builds docker image for subsonic
 FROM phusion/baseimage:0.9.11
 MAINTAINER Carlos Hernandez <carlos@techbyte.ca>
-ADD sources.list /etc/apt/
 
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
+ADD sources.list /etc/apt/
 
 # Set locale to UTF-8
 ENV LANGUAGE en_US.UTF-8
