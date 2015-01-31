@@ -1,5 +1,5 @@
 # Builds docker image for subsonic
-FROM phusion/baseimage:0.9.11
+FROM phusion/baseimage:0.9.15
 MAINTAINER Carlos Hernandez <carlos@techbyte.ca>
 
 # Let the container know that there is no tty
@@ -31,7 +31,9 @@ RUN apt-get install -qy openjdk-6-jre
 RUN apt-get clean
 
 # install subsonic
-ADD http://downloads.sourceforge.net/project/subsonic/subsonic/5.0/subsonic-5.0.deb /tmp/subsonic.deb
+
+#ADD http://downloads.sourceforge.net/project/subsonic/subsonic/5.0/subsonic-5.0.deb /tmp/subsonic.deb
+ADD http://sourceforge.net/projects/subsonic/files/subsonic/sonos-beta/subsonic-5.1.deb/download /tmp/subsonic.deb
 RUN dpkg -i /tmp/subsonic.deb && rm /tmp/subsonic.deb
 
 # Create hardlinks to the transcoding binaries.
