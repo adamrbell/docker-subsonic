@@ -1,12 +1,9 @@
 # Builds docker image for subsonic
-FROM phusion/baseimage:0.9.15
+FROM phusion/baseimage:0.9.16
 MAINTAINER Carlos Hernandez <carlos@techbyte.ca>
 
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
-
-# Set correct environment variables
-ENV HOME /root
 
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
@@ -28,7 +25,9 @@ RUN usermod -g 100 nobody
 
 # install dependencies for subsonic
 RUN apt-get install -qy openjdk-6-jre
-RUN apt-get clean
+
+# Clean up APT when done.
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # install subsonic
 
