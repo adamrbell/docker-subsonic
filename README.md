@@ -38,5 +38,5 @@ docker run -d --net=host -v /*your_subsonichome_location*:/subsonic \
                          -v /*your_music_folder_location*:/music \
                          -v /*your_podcast_folder_location*:/podcasts \
                          -v /etc/localtime:/etc/localtime:ro
-                         --name=subsonic hurricane/docker-subsonic
+                         --name=subsonic adamrbell/docker-subsonic-http
 ```
