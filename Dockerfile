@@ -32,7 +32,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # install subsonic
 
 #ADD http://downloads.sourceforge.net/project/subsonic/subsonic/5.0/subsonic-5.0.deb /tmp/subsonic.deb
-ADD http://sourceforge.net/projects/subsonic/files/subsonic/sonos-beta/subsonic-5.1.deb/download /tmp/subsonic.deb
+ADD http://sourceforge.net/projects/subsonic/files/subsonic/5.2/subsonic-5.2.deb/download /tmp/subsonic.deb
 RUN dpkg -i /tmp/subsonic.deb && rm /tmp/subsonic.deb
 
 # Create hardlinks to the transcoding binaries.
